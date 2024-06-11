@@ -3,5 +3,6 @@ from .views import WorkersListView, WorkersDetailView
 urlpatterns = [
     path('', WorkersListView.as_view(), name='workers-list'),
     path('<int:pk>/', WorkersDetailView.as_view(), name='workers-detail' ),
+    path('auth/', include('rest_framework.urls')),
 
 ]
