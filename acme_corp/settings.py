@@ -43,6 +43,8 @@ INSTALLED_APPS = [
 #my apps
     'worker',
     'product',
+# openapi
+    'drf_yasg',
 ]
 
 
