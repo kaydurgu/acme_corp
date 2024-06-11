@@ -1,8 +1,13 @@
 from django.shortcuts import render
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter, OrderingFilter
 from rest_framework.generics import ListAPIView, RetrieveAPIView, CreateAPIView
 from rest_framework import permissions
-from product.models import Product
+from rest_framework.response import Response
+from rest_framework.views import APIView
 
+from product.models import Product
+import django_filters
 from .serializers import ProductSerializer
 
 # Create your views here.
@@ -17,12 +22,23 @@ class ProductListView(ListAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [permissions.IsAuthenticated, ]
-
+    filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    filterset_fields = ['category']
+    search_fields = ['name', 'description', 'category']
+    ordering_fields = ['price']
+    ordering = ['-price']
 class ProductDetailView(RetrieveAPIView):
     queryset = Product.objects.all()
     serializer_class =  ProductSerializer
     permission_classes = [permissions.IsAuthenticated, ]
+
 class ProductCreateView(CreateAPIView):
     queryset = Product.objects.all()
     serializer_class = ProductSerializer
     permission_classes = [permissions.IsAuthenticated,]  #Admin group custom permissioon class will be added
+
+
+class ProductCategoryListView(APIView):
+    def get(self, request, format=None):
+        categories = Product.CATEGORY_CHOICES
+        return Response(categories)
