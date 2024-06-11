@@ -6,3 +6,7 @@ class WorkerSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = ['id', 'username', 'email', 'phone_number', 'first_name', 'last_name', 'position', 'role']
+class WorkerUpdateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = '__all__'

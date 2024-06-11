@@ -1,0 +1,60 @@
+#   Installation of django-restframework
+#   drf-yasg (OpenAPI)
+
+
+
+APPS
+
+User     				Done
+Product   				Done
+
+
+1. def models
+	User ( workers ) 
+		Groups 
+			Worker
+			Admin
+					Done
+
+	Product   			Done
+
+
+
+2. def serializers
+
+	UserSerializer     Done ( Maybe for Admin Users i will make another view with more info about users)
+	ProductSerializer  Done 
+
+3. views /  Endpoints
+	list_of_all_workers  			  #  done 
+	list_of_all_workers    for admin with more fields   # maybe if there will be time 
+	list_of_all_products         	  :Done 
+	products/<pk> : detailed view 	  : Done    
+	products/<pk>/update/retrieve:	           only for admin group 
+	products/create                   : Done   only admin group
+	list_of_products by category 
+	product/filter by name description / added 
+	product<cats>
+	
+
+
+
+
+user - list of users
+
+GET
+/POST/PUT/DELETE
+
+
+5.Documentation OpenAPI
+
+Done
+
+
+6. GitHUB
+
+
+GitHub Readme 
+Screens 
+
+	
