@@ -110,6 +110,32 @@ The `Profile` model represents users with the following fields:
 
 ## Screenshots and Video Demonstration
 
+[Video Demonstration](https://drive.google.com/drive/u/0/folders/1hmmkkC2nfsQ-4uhPyrgkIuJag_WJVNel)
+
+
+Worker Endpoints
+
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_-1.png)
+
+Product Endpoints
+
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_0.png)
+
+Product|Filters
+
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_1.png)
+
+- **/products/?category=TO**
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_2.png)
+
+- **/products/?category=TO&ordering=manufactured_date**
+
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_3.png)
+
+GET /users/{id}/update: Retrieve user update form.
+
+![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_4.png)
+
 
 ## Getting Started
 
