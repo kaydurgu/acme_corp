@@ -31,8 +31,11 @@ class Product(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=2, choices=CATEGORY_CHOICES, default=OTHER)
-    manufactured_date = models.DateField()
+    manufactured_date = models.DateField(auto_now=True)
     expiration_date = models.DateField()
+    barcode = models.CharField(max_length=25)
+    location = models.CharField(max_length=55)
     responsible_worker = models.ForeignKey(Profile, on_delete=models.CASCADE, related_name='responsible_worker')
+
     def __str__(self):
         return self.name
