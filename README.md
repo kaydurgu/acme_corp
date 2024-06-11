@@ -132,7 +132,7 @@ Product|Filters
 
 ![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_3.png)
 
-GET /users/{id}/update: Retrieve user update form.
+- **PUT /products/{id}/update/**: Fully update a product.
 
 ![ ](https://github.com/kaydurgu/acme_corp/blob/main/screens/Screenshot_4.png)
 
